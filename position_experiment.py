@@ -11,8 +11,8 @@ from dtaianomaly.data import UCRLoader
 from dtaianomaly.evaluation import Precision, Recall, FBeta, AreaUnderROC, AreaUnderPR
 from eventwise_metrics import EventWisePrecision, EventWiseRecall, EventWiseFBeta
 
-data_dir = r"C:\Users\34622\Desktop\1MAI\thesiscode\datasets\UCR_Anomaly_FullData"
-out_dir  = r"C:\Users\34622\Desktop\1MAI\thesiscode\results\ContextPosition\LocalOutlierFactor\DemandPower"
+data_dir = os.path.join("datasets", "UCR_Anomaly_FullData")
+out_dir  = os.path.join("results",  "position","LocalOutlierFactor",  "PowerDemand")
 os.makedirs(out_dir, exist_ok=True)
 
 datasets = {
@@ -253,4 +253,5 @@ ax.set(title="Event-wise Precision, Recall & F1 Score vs Part",
        xlabel="Part", ylabel="Score")
 ax.legend(fontsize=6); ax.grid(); plt.tight_layout()
 fig.savefig(os.path.join(out_dir, "agg_eventwise_with_years.png"), dpi=150)
+
 plt.show()
