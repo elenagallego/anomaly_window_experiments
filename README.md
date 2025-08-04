@@ -15,13 +15,6 @@ This repository contains code developed for a Master's thesis exploring the role
 | `position_experiment.py`     | Evaluates detection performance across different context positions in the training data of cyclical datasets.      |
 | `prototype_experiment.py`    | Evaluates detection performance using a prototype-based window selection approach.                                 |
 
-## Requirements
-
-Install the required packages using:
-
-```bash
-pip install -r requirements.txt
-
 
 ### Datasets
 This repository uses time series datasets from the [UCR Anomaly Archive](https://www.cs.ucr.edu/~eamonn/discords/).
@@ -29,4 +22,12 @@ This repository uses time series datasets from the [UCR Anomaly Archive](https:/
 Due to size and licensing constraints, **the datasets are not included in this repository**.  
 To run the experiments:
 Download the required `.txt` files manually from the [UCR Anomaly Archive](https://www.cs.ucr.edu/~eamonn/discords/).
+
+## Requirements
+
+Install the required packages using:
+
+```bash
+pip install -r requirements.txt
+
 
