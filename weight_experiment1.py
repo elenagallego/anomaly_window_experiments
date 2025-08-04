@@ -18,8 +18,8 @@ from dtaianomaly.evaluation import Precision, Recall, FBeta, AreaUnderROC, AreaU
 from dtaianomaly.data import UCRLoader
 from eventwise_metrics import EventWisePrecision, EventWiseRecall, EventWiseFBeta
 
-dataset_base_path = r"C:\Users\34622\Desktop\1MAI\thesiscode\datasets\UCR_Anomaly_FullData"
-output_dir = r"C:\Users\34622\Desktop\1MAI\thesiscode\results\Weights\median_method\definite2\Experiment1\ltstdbs"
+dataset_base_path = os.path.join("datasets", "UCR_Anomaly_FullData")
+output_dir = os.path.join("results", "Weights",  "Experiment1","median_method", "ltstdbs")
 os.makedirs(output_dir, exist_ok=True)
 
 dataset_info = {  "180_UCR_Anomaly_ltstdbs30791ES_20000_52600_52800.txt": (52600,52800),
@@ -429,4 +429,5 @@ ax.set(
 )
 ax.legend(); ax.grid(); fig.tight_layout()
 fig.savefig(os.path.join(output_dir, "weighted_eventwise_precision_recall_f0.5_vs_ws.png"), dpi=150)
+
 plt.show()
