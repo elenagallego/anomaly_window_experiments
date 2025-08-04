@@ -22,8 +22,8 @@ Install the required packages using:
 ```bash
 pip install -r requirements.txt
 
-## Datasets
 
+### Datasets
 This repository uses time series datasets from the [UCR Anomaly Archive](https://www.cs.ucr.edu/~eamonn/discords/).
 
 Due to size and licensing constraints, **the datasets are not included in this repository**.  
