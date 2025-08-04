@@ -11,8 +11,7 @@ from dtaianomaly.evaluation import Precision, Recall, FBeta, AreaUnderROC, AreaU
 from eventwise_metrics import EventWisePrecision, EventWiseRecall, EventWiseFBeta
 from dtaianomaly.preprocessing import MovingAverage
 
-BASE_PATH = r"C:\Users\34622\Desktop\1MAI\thesiscode\datasets\UCR_Anomaly_FullData"
-DATA_GROUPS = {
+BASE_PATH = os.path.join("datasets", "UCR_Anomaly_FullData")DATA_GROUPS = {
     'MARS': [
         "157_UCR_Anomaly_TkeepFirstMARS_3500_5365_5380.txt",
         "160_UCR_Anomaly_TkeepThirdMARS_3500_4711_4809.txt",
@@ -71,7 +70,7 @@ for path, meta in DATASETS.items():
     print(f"{os.path.basename(path)} best -> ws={best['ws']}, k={best['k']}, p={best['p']}, F1={best['f1']:.3f}")
 
 results = []
-out_dir = os.path.join(r"C:\Users\34622\Desktop\1MAI\thesiscode\results\PrototypeGrid","MARS_InternalBleeding2")
+out_dir = os.path.join("results", "Prototypes", "InternalBleeding+MARS")
 os.makedirs(out_dir, exist_ok=True)
 for path, meta in DATASETS.items():
     grp = meta['group']
@@ -203,4 +202,5 @@ ax.legend(bbox_to_anchor=(1.02, 1), loc='upper left')
 fig.subplots_adjust(bottom=0.2)
 plt.tight_layout()
 fig.savefig(os.path.join(out_dir, 'all_metrics_per_dataset.png'), dpi=150)
+
 plt.show()
