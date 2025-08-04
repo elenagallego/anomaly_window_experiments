@@ -25,8 +25,8 @@ from dtaianomaly.evaluation import (
 from dtaianomaly.data import UCRLoader
 from eventwise_metrics import EventWisePrecision, EventWiseRecall, EventWiseFBeta
 
-DATASET_BASE = r"C:\Users\34622\Desktop\1MAI\thesiscode\datasets\UCR_Anomaly_FullData"
-OUTPUT_DIR   = r"C:\Users\34622\Desktop\1MAI\thesiscode\results\Size\matrix_profile\definite\ECG"
+DATASET_BASE = os.path.join("datasets", "UCR_Anomaly_FullData")
+OUTPUT_DIR   = os.path.join("results", "Size", "matrix_profile","ECG")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 dataset_info = {
@@ -365,3 +365,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
